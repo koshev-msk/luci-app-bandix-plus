@@ -76,6 +76,12 @@ After installation:
 - This package depends on: `luci-base`, `luci-lib-jsonc`, `curl`, `bandix-plus`.
 
 
+## Team Members
+
+- [timsaya](https://github.com/timsaya)
+- [smallprogram](https://github.com/smallprogram)
+
+
 ## License
 
 Apache 2.0. See [LICENSE](LICENSE).

@@ -75,6 +75,13 @@ LuCI Bandix Plus 是 `bandix-plus` 的 LuCI 前端，面向 OpenWrt 的流量监
 
 - 本包依赖：`luci-base`、`luci-lib-jsonc`、`curl`、`bandix-plus`。
 
+
+## 团队成员
+
+- [timsaya](https://github.com/timsaya)
+- [smallprogram](https://github.com/smallprogram)
+
+
 ## 许可证
 
 Apache 2.0，详见 [LICENSE](LICENSE)。
