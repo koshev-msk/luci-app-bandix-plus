@@ -35,7 +35,11 @@ jobs:
           url_tags: https://api.github.com/repos/${{ env.luci-app-bandix-plus }}/releases/latest
         run: |
           cd luci-app-bandix-plus
-          latest_version=$(awk -F ':=' '/^PKG_VERSION:=/ {print $2}' Makefile | tr -d ' \n')
+
+          pkg_version=$(awk -F ':=' '/^PKG_VERSION:=/ {print $2}' Makefile | tr -d ' \n')
+          pkg_release=$(awk -F ':=' '/^PKG_RELEASE:=/ {print $2}' Makefile | tr -d ' \n')
+
+          latest_version="${pkg_version}-r${pkg_release}"
           echo "latest_version=${latest_version}" >> $GITHUB_OUTPUT
 
           remote_latest_version=$(wget -qO- -t1 -T2 ${{env.url_tags}} | jq -r '.tag_name')
